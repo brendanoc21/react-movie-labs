@@ -19,8 +19,8 @@ const UpcomingMoviesPage = (props) => {
   const upcomingMovies = data.results;
 
   // Redundant, but necessary to avoid app crashing.
-  const favorites = upcomingMovies.filter(m => m.favorite)
-  localStorage.setItem('favorites', JSON.stringify(favorites))
+  const watchlist = upcomingMovies.filter(m => m.watch)
+  localStorage.setItem('watchlist', JSON.stringify(watchlist))
 
   return (
     <PageTemplate
