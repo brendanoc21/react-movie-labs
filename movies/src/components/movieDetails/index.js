@@ -9,6 +9,8 @@ import Fab from "@mui/material/Fab";
 import Typography from "@mui/material/Typography";
 import Drawer from "@mui/material/Drawer";
 import MovieReviews from "../movieReviews";
+import { Link } from "react-router-dom";
+import Button from "@mui/material/Button";
 
 
 const root = {
@@ -88,7 +90,13 @@ const MovieDetails = ({ movie }) => {  // Don't miss this!
       <Drawer anchor="top" open={drawerOpen} onClose={() => setDrawerOpen(false)}>
         <MovieReviews movie={movie} />
       </Drawer>
-      </>
+
+      <Link to={`/actors/${movie.id}`}>
+          <Button variant="outlined" size="large" color="primary">
+            Actors
+          </Button>
+      </Link>
+    </>
   );
 };
 export default MovieDetails ;
