@@ -1,13 +1,12 @@
 import React from "react";
-import MovieHeader from "../headerMovie";
+import Header from "../headerMovie";
 import Grid from "@mui/material/Grid2";
-import ImageList from "@mui/material/ImageList";
-import ImageListItem from "@mui/material/ImageListItem";
 import { getMovieActors } from "../../api/tmdb-api";
 import { useQuery } from "react-query";
 import Spinner from '../spinner';
+import ActorList from "../actorList";
 
-const TemplateActorPage = ({ movie, children }) => {
+const TemplateActorPage = ({ movie }) => {
   const { data , error, isLoading, isError } = useQuery(
     ["actors", { id: movie.id }],
     getMovieActors
@@ -23,7 +22,16 @@ const TemplateActorPage = ({ movie, children }) => {
   const actors = data.cast 
 
   return (
-    console.log(actors)
+    <>
+    <Grid container>
+      <Grid size={12}>
+        <Header movie={movie} />
+      </Grid>
+      <Grid container sx={{flex: "1 1 500px"}}>
+        <ActorList actors={actors}></ActorList>
+      </Grid>
+    </Grid>
+    </>
   );
 };
 

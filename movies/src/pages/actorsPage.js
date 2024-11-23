@@ -26,9 +26,10 @@ const ActorsPage = (props) => {
     <>
       {movie ? (
         <>
-          <PageTemplate movie={movie}>
-            <MovieDetails movie={movie} />
-          </PageTemplate>
+          <PageTemplate 
+          movie={movie}
+          title="Actors"
+          />
         </>
       ) : (
         <p>Waiting for movie details</p>
