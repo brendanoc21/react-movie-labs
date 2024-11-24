@@ -5,8 +5,8 @@ import { getMovieActors } from "../../api/tmdb-api";
 import { useQuery } from "react-query";
 import Spinner from '../spinner';
 import ActorList from "../actorList";
-
-const TemplateCastPage = ({ movie }) => {
+ 
+const TemplateCastPage = ({ movie, action }) => {
   const { data , error, isLoading, isError } = useQuery(
     ["actors", { id: movie.id }],
     getMovieActors
@@ -28,7 +28,7 @@ const TemplateCastPage = ({ movie }) => {
         <Header movie={movie} />
       </Grid>
       <Grid container sx={{flex: "1 1 500px"}}>
-        <ActorList actors={actors}></ActorList>
+        <ActorList action={action} actors={actors}></ActorList>
       </Grid>
     </Grid>
     </>
