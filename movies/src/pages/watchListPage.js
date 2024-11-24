@@ -9,7 +9,6 @@ import RemoveFromWatchlist from "../components/cardIcons/removeFromWatchlist";
 const WatchlistPage = () => {
   const {watchlist: movieIds } = useContext(MoviesContext);
 
-  // Create an array of queries and run in parallel.
   const watchlistMovieQueries = useQueries(
     movieIds.map((movieId) => {
       return {
@@ -18,7 +17,6 @@ const WatchlistPage = () => {
       };
     })
   );
-  // Check if any of the parallel queries is still loading.
   const isLoading = watchlistMovieQueries.find((m) => m.isLoading === true);
 
   if (isLoading) {
