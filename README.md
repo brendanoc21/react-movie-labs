@@ -5,7 +5,7 @@ Name: Brendan O'Connor (20098888)
 ## Overview.
 
 This is a react app that uses the tmdb api to display details of movies and actors in various forms. 
-You can view a list of movies that is filled with current, upcoming or top rated movies. 
+You can view a list of movies that is filled with current, upcoming, top rated or trending movies. 
 These lists can be searched by name or sorted by genre. 
 You can add movies to your favourites list and upcoming movies to your watchlist. 
 If a movie is added to both, a purple icon will be used instead of the red or blue icons for favourites and watchlist respectively. 
@@ -19,6 +19,7 @@ You can then click "More Info..." on an actor to see aditional details about the
 + Top Rated Movies page
 + Movie Cast List page
 + Actor Details page
++ Trending Movies page
 
 ## Setup requirements.
 
@@ -30,13 +31,15 @@ There are no non standard setup requirements.
 + Movie Credits list - movie/:id/credits
 + Actor details - person/:id
 + Actor images - person/:id/images
++ Trending Movies - trending/movie
 
 ## Routing.
 
-+ movies/watchlist - Display the user's watchlist
++ movies/watchlist - Display Movies saved to the user's watchlist
 + movies/toprated - View a list of top rated Movies
 + cast/:id - View the cast of a specific movie
 + actors/:id - Display the details on a specific actor
++ movies/trending - Display a list of Movies that are currently trending
 
 ## Independent learning (If relevant).
 
