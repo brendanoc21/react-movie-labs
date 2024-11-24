@@ -26,10 +26,8 @@ const ActorHeader = (props) => {
         <ArrowBackIcon color="primary" fontSize="large" />
       </IconButton>
 
-      <Typography variant="h4" component="h3">
+      <Typography variant="h3" component="h3">
         {actor.name}
-        <br />
-        <span sx={{ fontSize: "1.5rem" }}>{`   "Born ${actor.birthday}"`} </span>
       </Typography>
 
       <IconButton aria-label="go forward" onClick={() => navigate(+1) } >
