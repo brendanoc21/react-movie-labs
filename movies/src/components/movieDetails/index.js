@@ -91,9 +91,9 @@ const MovieDetails = ({ movie }) => {  // Don't miss this!
         <MovieReviews movie={movie} />
       </Drawer>
 
-      <Link to={`/actors/${movie.id}`}>
-          <Button variant="outlined" size="large" color="primary">
-            Actors
+      <Link to={`/cast/${movie.id}`}>
+          <Button variant="contained" size="large" color="secondary">
+            Cast List
           </Button>
       </Link>
     </>

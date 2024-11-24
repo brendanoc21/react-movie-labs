@@ -6,7 +6,7 @@ import { useQuery } from "react-query";
 import Spinner from '../spinner';
 import ActorList from "../actorList";
 
-const TemplateActorPage = ({ movie }) => {
+const TemplateCastPage = ({ movie }) => {
   const { data , error, isLoading, isError } = useQuery(
     ["actors", { id: movie.id }],
     getMovieActors
@@ -35,4 +35,4 @@ const TemplateActorPage = ({ movie }) => {
   );
 };
 
-export default TemplateActorPage;
+export default TemplateCastPage;
